@@ -44,7 +44,7 @@ function Navbar() {
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                        Online Broker
-                        <i class='fab fa-typo3' />
+                        <i className='fab fa-typo3' />
 
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -86,18 +86,16 @@ function Navbar() {
                         </li>
                     </ul>
                     <Container>
-                        {button && <Button buttonStyle='btn--outline'>Login</Button>}
+                        {button && <Button onClick={openModal} buttonStyle='btn--outline'>Login</Button>}
                     </Container>
 
                 </div>
             </nav>
-            {/*}
             <Container>
-               {button && <Button onClick={openModal} buttonStyle='btn--outline'>Login</Button>}
                 <Modal showModal ={showModal} setShowModal = {setShowModal}/>
             </Container>
-            {*/}
+
         </>
     );
-};
+}
 export default Navbar;
