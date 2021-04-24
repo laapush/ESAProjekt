@@ -2,9 +2,10 @@ import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
+import {Form, FormButton, FormContent, FormH1, FormInput, FormLabel, FormWrap, Text} from "./Signin/SigninElements";
 
 const Background = styled.div`
-  width: 100%;
+  width: 300%;
   height: 800%;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -14,17 +15,14 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 500px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   position: absolute;
-  top: 100px;
-  left: 0;
-  z-index: 10;
+  top: 80px;
+  margin-left: -300px;
   border-radius: 10px;
 `;
 
@@ -101,7 +99,19 @@ export const Modal = ({ showModal, setShowModal }) => {
                     <animated.div style={animation}>
                         <ModalWrapper showModal={showModal}>
                             <ModalContent>
-                                <h1>Login</h1>
+                                <FormWrap>
+                                    <FormContent>
+                                        <Form action="#">
+                                            <FormH1>Login</FormH1>
+                                            <FormLabel htmlFor='for'>E-Mail</FormLabel>
+                                            <FormInput type='email' required/>
+                                            <FormLabel htmlFor='for'>Passwort</FormLabel>
+                                            <FormInput type='password' required/>
+                                            <FormButton type='submit'>Weiter</FormButton>
+                                            <Text>Passwort vergessen</Text>
+                                        </Form>
+                                    </FormContent>
+                                </FormWrap>
                             </ModalContent>
                             <CloseModalButton
                                 aria-label='Close modal'

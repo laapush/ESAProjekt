@@ -50,13 +50,12 @@ export const Container = styled.div`
 
     export const Form = styled.form`
     background: rgba(0,0,0,0.4);
-    max-width: 400px;
-    height: auto;
-    width: 70%;
+    width: 600px;
+    height: 500px;
     z-index: 1;
     display: grid;
     margin: 0 auto;
-    padding: 80px 32px;
+    padding: 50px 32px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.9);
     
@@ -66,9 +65,9 @@ export const Container = styled.div`
     ;
 
     export const FormH1 = styled.h1`
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     text-align: center;
     
